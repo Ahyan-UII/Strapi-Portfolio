@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolios",
+  "info": {
+    "singularName": "portfolio",
+    "pluralName": "portfolios",
+    "displayName": "portfolio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Github": {
+      "type": "string"
+    },
+    "Figma": {
+      "type": "string"
+    },
+    "LiveDemo": {
+      "type": "string"
+    },
+    "DemoVideo": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "slug_icons": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::slug-icon.slug-icon",
+      "mappedBy": "portfolios"
+    }
+  }
+}

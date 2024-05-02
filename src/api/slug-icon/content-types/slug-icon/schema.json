@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "slug_icons",
+  "info": {
+    "singularName": "slug-icon",
+    "pluralName": "slug-icons",
+    "displayName": "slugIcon",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "portfolios": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::portfolio.portfolio",
+      "inversedBy": "slug_icons"
+    }
+  }
+}
